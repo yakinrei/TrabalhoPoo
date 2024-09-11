@@ -8,10 +8,13 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
 {
     internal class Emprestimos
     {
+        #region Atributos
         private Livros LivroEmprestado { get; set; }
         private Usuarios UsuarioRequerinte { get; set; }
         private DateTime DataEmprestimo { get; set; }
-
+        #endregion
+        
+        #region Builder
         public Emprestimos(Livros LE, Usuarios UR)
         {
             LivroEmprestado = LE;
@@ -24,7 +27,9 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
             UsuarioRequerinte = UR;
             DataEmprestimo = DT;
         }
+        #endregion
 
+        #region Getters
         public Livros Ft_GetLivro()
         { 
             return LivroEmprestado; 
@@ -39,7 +44,9 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
         { 
             return DataEmprestimo; 
         }
+        #endregion
 
+        #region ExibirInfo
         public void Ft_ExibirInformacoesAtraso()
         {
             Ft_GetUsuario().Ft_FullExibirInformacoes();
@@ -60,5 +67,6 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
             Ft_GetLivro().Ft_ExibirInformacoes();
             Console.Write($"Data de Empréstimo: {(Ft_GetDataEmprestimo().Day > 9 ? Ft_GetDataEmprestimo().Day : "0" + Ft_GetDataEmprestimo().Day)}/{(Ft_GetDataEmprestimo().Month > 9 ? Ft_GetDataEmprestimo().Month : "0" + Ft_GetDataEmprestimo().Month)}/{Ft_GetDataEmprestimo().Year,-23}");
         }
+        #endregion
     }
 }

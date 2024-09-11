@@ -22,7 +22,7 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
         public string name;
         #endregion
 
-        #region Inicialização
+        #region Builder
         public Bibliotecas() : this(Ft_VerificaNome()) { }
         public Bibliotecas(string nome)
         {
@@ -418,9 +418,9 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
                 Console.WriteLine("Livro não disponível");
                 return false;
             }
-            else if (livro.Ft_GetCopias() > livro.CopiasEmprestadas)
+            else if (livro.Ft_GetCopias() > livro.Ft_GetCopiasEmprestadas())
             {
-                Console.WriteLine($"Existem {livro.Ft_GetCopias() - livro.CopiasEmprestadas} cópias do livro {livro.Ft_GetTitulo()} disponiveis");
+                Console.WriteLine($"Existem {livro.Ft_GetCopias() - livro.Ft_GetCopiasEmprestadas()} cópias do livro {livro.Ft_GetTitulo()} disponiveis");
                 return true;
             }
             else
@@ -450,7 +450,7 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
                 if (Ft_VerificarDisponibilidade(requerido))
                 {
                     EmprestimosAtivos.Add(new Emprestimos(requerido, solicitante));
-                    requerido.CopiasEmprestadas++;
+                    requerido.Ft_EmprestaLivro();
                     Console.WriteLine($"Livro '{requerido.Ft_GetTitulo()}' emprestado para {solicitante.Ft_GetNome()}.\n");
                     return;
                 }
@@ -461,7 +461,7 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
         public void Ft_ProcessaEmprestimo(Livros livro, Usuarios usuario, DateTime DT)
         {
             EmprestimosAtivos.Add(new Emprestimos(livro, usuario, DT));
-            livro.CopiasEmprestadas++;
+            livro.Ft_EmprestaLivro();
             //Console.WriteLine($"Livro '{livro.Titulo}' emprestado para {usuario.Nome}.\n");
             return;
         }
@@ -487,7 +487,7 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
                 {
                     if (item.Ft_GetLivro() == devolvido && item.Ft_GetUsuario() == solicitante)
                     {
-                        devolvido.CopiasEmprestadas--;
+                        devolvido.Ft_LivroDevolvido();
                         Devolucao = item;
                         Console.WriteLine($"Livro '{devolvido.Ft_GetTitulo()}' devolvido por {solicitante.Ft_GetNome()}.\n");
                         break;

@@ -10,17 +10,18 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
 {
     internal class Livros
     {
+        #region Atributos
         private uint Id { get; set; }
         private string Titulo { get; set; }
         private string Autor { get; set; }
         private int Ano { get; set; }
         private int Copias { get; set; }
-        public int CopiasEmprestadas { get; set; }
+        private int CopiasEmprestadas { get; set; }
+        #endregion
 
-
+        #region Builder
         public Livros() : this(Ft_VerificaTituloLivro(), Ft_VerificaNome(), Ft_VerificaAno(), Ft_VerificaNumeroCopias()) { }
         
-
         public Livros(string titulo, string autor, int ano, int copias)
         {
             Titulo = titulo;
@@ -84,7 +85,6 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
             return titulo;
         }
 
-
         private static string Ft_VerificaNome()
         {
             string nome;
@@ -137,7 +137,6 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
             return nome;
         }
 
-
         private static int Ft_VerificaAno()
         {
             int ano;
@@ -185,28 +184,52 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
 
             return numeroCopias;
         }
+        #endregion
 
+        #region Getters
         public uint Ft_GetId() 
         { 
             return this.Id; 
         }
+        
         public string Ft_GetTitulo()
         {
             return this.Titulo;
         }
+        
         public int Ft_GetAno()
         {
             return this.Ano;
         }
+        
         public string Ft_GetAutor()
         {
             return this.Autor;
         }
+        
         public int Ft_GetCopias()
         {
             return this.Copias;
         }
+        public int Ft_GetCopiasEmprestadas()
+        {
+            return this.CopiasEmprestadas;
+        }
+        #endregion
 
+        #region Setters
+        public void Ft_EmprestaLivro()
+        {
+            this.CopiasEmprestadas++;
+        }
+
+        public void Ft_LivroDevolvido()
+        {
+            this.CopiasEmprestadas--;
+        }
+        #endregion
+
+        #region ExibirInfo
         public void Ft_ExibirInformacoes()
         {
             Console.WriteLine($"Livro: {Ft_GetTitulo(),-42} Código do Livro: {Ft_GetId().ToString("D5"),5}");
@@ -215,7 +238,11 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
         public void Ft_FullExibirInformacoes()
         {
             Console.WriteLine($"Livro: {Ft_GetTitulo(),-42} Código do Livro: {Ft_GetId().ToString("D5"),5}");
-            Console.WriteLine($"Autor: {Ft_GetAutor(),-42} {Ft_GetCopias()-CopiasEmprestadas} de {Ft_GetCopias()} disponiveis");
+            Console.WriteLine($"Autor: {Ft_GetAutor(),-42} {Ft_GetCopias()-Ft_GetCopiasEmprestadas()} de {Ft_GetCopias()} disponiveis");
         }
+        #endregion
+
+        
+
     }
 }

@@ -10,12 +10,14 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
 {
     internal class Usuarios
     {
+        #region Atributos
         private uint Id { get; set; }
         private string Nome { get; set; }
         private string Endereco { get; set; }
         private string Contato { get; set; }
+        #endregion
 
-
+        #region Builder
         public Usuarios() : this(Ft_VerificaNome(), Ft_VerificaEndereco(), Ft_VerificaTelemovel()) { }
 
         public Usuarios(string nome, string endereco, string contato)
@@ -26,7 +28,7 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
             Id = Bibliotecas.NextIdUsuario;
             Bibliotecas.NextIdUsuario++;
         }
-
+        
         private static string Ft_VerificaNome()
         {
             string nome;
@@ -78,7 +80,6 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
 
             return nome;
         }
-
 
         private static string Ft_VerificaEndereco()
         {
@@ -148,7 +149,9 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
             } while (!verifica);
             return telemovel;
         }
+        #endregion
 
+        #region Getters
         public string Ft_GetNome() 
         { 
             return this.Nome; 
@@ -165,6 +168,9 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
         { 
             return this.Endereco; 
         }
+        #endregion
+
+        #region ExibirInfo
         public void Ft_ExibirInformacoes()
         {
             Console.WriteLine($"Usuário: {Ft_GetNome(),-40} Nº Usuário: {Ft_GetId().ToString("D5"),10}");
@@ -175,5 +181,6 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
             Console.WriteLine($"Morada: {Ft_GetMorada()}");
             Console.WriteLine($"Contato: {Ft_GetContato()}");
         }
+        #endregion
     }
 }
