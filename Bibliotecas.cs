@@ -15,7 +15,7 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
         public static uint NextIdUsuario = 1;
         public static uint NextIdBook = 1;
         public static string currentDirectory = Environment.CurrentDirectory;
-        public static string projectDirectory = Directory.GetParent(Directory.GetParent(currentDirectory).FullName).FullName;
+        public static string projectDirectory = Directory.GetParent(Directory.GetParent(Directory.GetParent(currentDirectory).FullName).FullName).FullName;
         public List<Livros> Acervo = new List<Livros>();
         private List<Usuarios> Utentes = new List<Usuarios>();
         private List<Emprestimos> EmprestimosAtivos = new List<Emprestimos>();

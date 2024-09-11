@@ -1,0 +1,604 @@
+C# Programming
+John Doe
+2020
+3
+Advanced Java
+Jane Smith
+2019
+2
+Python for Beginners
+Albert Johnson
+2021
+4
+JavaScript Essentials
+Emily Brown
+2018
+5
+Data Structures in Python
+Robert White
+2020
+3
+Introduction to Machine Learning
+Sophia Davis
+2019
+4
+Database Management Systems
+Michael Clark
+2017
+2
+Web Development with HTML5
+Emma Lewis
+2021
+6
+Cloud Computing Basics
+James Walker
+2020
+3
+Artificial Intelligence: A Modern Approach
+Liam Harris
+2018
+4
+The Art of Computer Programming
+William Martinez
+2021
+5
+Algorithms Unlocked
+Isabella Lee
+2019
+3
+Introduction to Data Science
+Ethan Thompson
+2020
+7
+Operating System Concepts
+Olivia Scott
+2018
+2
+Software Engineering
+Benjamin Young
+2019
+4
+The C++ Programming Language
+Charlotte Hall
+2021
+3
+Functional Programming in Scala
+Lucas Allen
+2020
+6
+Cybersecurity Fundamentals
+Amelia Wright
+2021
+5
+Digital Marketing Strategies
+Henry King
+2018
+4
+Networking Essentials
+Grace Green
+2019
+2
+Object-Oriented Programming with Java
+Daniel Turner
+2020
+3
+Agile Software Development
+Harper Lewis
+2018
+6
+Big Data Analytics
+Jack Robinson
+2019
+5
+Machine Learning with Python
+Ella Carter
+2021
+4
+Discrete Mathematics
+Alexander Parker
+2017
+3
+Programming in Go
+Avery Morgan
+2020
+7
+React Native Development
+Sebastian Reed
+2021
+5
+Blockchain Technology
+Madison Collins
+2018
+4
+Deep Learning with TensorFlow
+Isaac Baker
+2019
+3
+Network Security Essentials
+Sophie Rivera
+2020
+2
+UX Design Principles
+Cameron Murphy
+2021
+6
+Introduction to Algorithms
+Zoe Bailey
+2017
+4
+Digital Logic Design
+Elijah Ross
+2019
+3
+PHP and MySQL Web Development
+Gabriel Powell
+2020
+5
+Artificial Neural Networks
+Nora Foster
+2021
+4
+Ruby on Rails Tutorial
+Julian Howard
+2018
+3
+Ethical Hacking
+Victoria Brooks
+2019
+7
+Cloud Security
+Levi Hughes
+2020
+2
+Mobile App Development
+Bella Diaz
+2021
+5
+Computer Networks
+Samuel Richardson
+2017
+4
+Data Mining Techniques
+Aidan Bennett
+2018
+3
+DevOps for Beginners
+Lily Peterson
+2021
+5
+Principles of Compiler Design
+Matthew Rogers
+2020
+4
+Parallel Programming
+Eva Flores
+2019
+2
+Virtual Reality Development
+Mason Simmons
+2020
+6
+Natural Language Processing with Python
+Lucy Foster
+2018
+4
+Software Testing Techniques
+Owen Perry
+2021
+3
+Cryptography and Network Security
+Emily Coleman
+2017
+5
+Android Application Development
+Isabella Hughes
+2019
+4
+Operating Systems Internals
+Benjamin Bryant
+2020
+2
+HTML & CSS: Design and Build Websites
+Sophia Long
+2021
+5
+Data Visualization with Python
+Liam Jenkins
+2019
+3
+Internet of Things (IoT)
+Grace Gibson
+2018
+4
+Software Architecture Patterns
+Logan Bishop
+2020
+2
+Scala for the Impatient
+Addison Hunter
+2021
+6
+SQL for Data Science
+Lucas Patterson
+2019
+5
+Game Development with Unity
+Hannah Mitchell
+2020
+3
+Digital Image Processing
+Mason Myers
+2017
+4
+Quantum Computing for Developers
+Nora Barnes
+2021
+2
+Cybersecurity Risk Management
+Levi Hall
+2018
+5
+Introduction to Cryptography
+Avery Nelson
+2019
+4
+IT Project Management
+Madison Adams
+2020
+3
+Learning Node.js
+Isaac Carter
+2021
+5
+Artificial Intelligence for Robotics
+Sophia Foster
+2017
+6
+Principles of Data Engineering
+Mason Torres
+2019
+4
+Augmented Reality Development
+Zoe Ramirez
+2020
+3
+Swift Programming for iOS
+Elijah Peterson
+2021
+2
+Deep Reinforcement Learning
+Gabriel Price
+2018
+5
+Big Data with Hadoop
+Victoria Watson
+2019
+4
+Linux System Programming
+Samuel Ward
+2020
+3
+Machine Learning in Action
+Olivia Brooks
+2021
+4
+Python Data Science Handbook
+Ella Reed
+2018
+5
+Agile Project Management
+Benjamin Coleman
+2019
+6
+Blockchain and Cryptocurrency
+Jack Perez
+2020
+3
+Advanced Data Structures
+William Ross
+2021
+4
+Kotlin Programming
+Lily Powell
+2018
+5
+Fundamentals of Database Systems
+Aidan Hughes
+2019
+3
+Introduction to Java Programming
+Noah Simmons
+2020
+4
+Web Scraping with Python
+Emma Coleman
+2021
+2
+Programming Rust
+Sebastian Myers
+2017
+5
+Data Analytics with R
+Mason Murphy
+2019
+6
+Software Development Life Cycle
+Lucas Foster
+2020
+4
+Intro to Cloud Computing with AWS
+Ella Scott
+2018
+3
+Design Patterns in C#
+Henry Jenkins
+2021
+5
+Microservices Architecture
+Emily Flores
+2019
+4
+Python Crash Course
+Levi Perry
+2020
+3
+Docker for Developers
+Harper Reed
+2021
+2
+Applied Machine Learning
+Julian Rivera
+2017
+5
+Introduction to Quantum Computing
+Sophie Hughes
+2019
+4
+Modern JavaScript Frameworks
+Cameron Bennett
+2020
+3
+NoSQL Databases
+Daniel Peterson
+2021
+4
+Principles of Distributed Systems
+Mason Ward
+2018
+5
+Game AI Development
+Avery Jenkins
+2019
+6
+Information Security Principles
+Ethan Long
+2020
+3
+Data Science for Business
+Grace Flores
+2021
+5
+Learning React
+Jack Watson
+2019
+4
+Agile Software Architecture
+Isabella Foster
+2020
+3
+Introduction to Big Data
+Liam Peterson
+2021
+6
+Hadoop: The Definitive Guide
+Mason Carter
+2018
+4
+API Design with Node.js
+Ella Bennett
+2020
+2
+R Programming for Data Science
+Isaac Nelson
+2019
+5
+Python Machine Learning
+Emma Adams
+2021
+4
+Android UI Design
+Julian Reed
+2017
+3
+SQL Performance Tuning
+Sophie Myers
+2019
+6
+Understanding the Linux Kernel
+Lily Perry
+2020
+5
+Serverless Computing with AWS Lambda
+Daniel Long
+2021
+4
+Computer Vision with OpenCV
+Lucas Foster
+2019
+3
+Distributed Systems
+Nora Coleman
+2020
+5
+Agile Development with Scrum
+Henry Bryant
+2021
+2
+Mastering Elasticsearch
+Mason Flores
+2018
+6
+NoSQL for Mere Mortals
+Elijah Powell
+2019
+4
+Functional Programming with F#
+Victoria Perez
+2020
+3
+Java Performance Tuning
+Ethan Hughes
+2021
+5
+Advanced Python Programming
+Avery Jenkins
+2017
+2
+Cybersecurity Threats and Countermeasures
+Levi Peterson
+2019
+4
+Machine Learning Systems
+Sophia Scott
+2020
+3
+Algorithms and Data Structures
+William Mitchell
+2021
+5
+Data-Driven Marketing
+Isabella Torres
+2018
+4
+Big Data with Spark
+Sebastian Brooks
+2019
+6
+Responsive Web Design with Bootstrap
+Benjamin Hughes
+2020
+2
+Python for Finance
+Liam Ross
+2021
+4
+Software Craftsmanship
+Olivia Jenkins
+2017
+5
+Java Concurrency in Practice
+Gabriel Bryant
+2019
+3
+Introduction to Blockchain
+Emily Price
+2020
+6
+Data Wrangling with Python
+Daniel Carter
+2021
+4
+Game Programming Patterns
+Zoe Richardson
+2018
+3
+Mastering Kubernetes
+Mason Scott
+2019
+5
+Understanding APIs
+Sophia Jenkins
+2020
+4
+Java Design Patterns
+Elijah Myers
+2021
+6
+Advanced Database Systems
+Grace Bryant
+2019
+3
+Web Animation with JavaScript
+Lucas Bailey
+2020
+2
+Learning TypeScript
+Madison Rivera
+2021
+5
+Hacking: The Art of Exploitation
+Julian Powell
+2017
+4
+Mastering Swift
+Avery Bennett
+2018
+3
+Data Pipelines with Apache Airflow
+Nora Hughes
+2019
+6
+PHP 7 Programming
+Benjamin Jenkins
+2020
+5
+Introduction to Scala
+Harper Peterson
+2021
+3
+Advanced C++ Programming
+Lily Brooks
+2018
+4
+Linux Command Line and Shell Scripting
+Levi Flores
+2019
+5
+The Pragmatic Programmer
+Julian Jenkins
+2020
+2
+Artificial Intelligence with Prolog
+Cameron Nelson
+2021
+6
+Programming in Haskell
+Isaac Mitchell
+2019
+4
+Blockchain Development with Solidity
+Sophia Carter
+2020
+3
+Hands-On Machine Learning with Scikit-Learn
+Elijah Hughes
+2021
+4
+Microservices with Docker
+Emma Bryant
+2019
+5
+Introduction to React Hooks
+Lucas Jenkins
+2020
+2
+Advanced SQL Queries
+Zoe Powell
+2021
+6
+Principles of Cloud Architecture
+Daniel Brooks
+2018
+4
+Mastering Git
+Avery Torres
+2019
+3
+Learning D3.js for Data Visualization
+Victoria Flores
+2020
+5
+Abc Diarreia
+Hernani Roxo
+2024
+2

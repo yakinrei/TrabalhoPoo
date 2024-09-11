@@ -1,0 +1,303 @@
+Pedro Almeida
+Rua do Couteiro 72 R/C 4705-091 Braga Portugal
+911510784
+Maria Silva
+Avenida da Liberdade 45 2ºEsq 1250-001 Lisboa Portugal
+912345678
+João Fernandes
+Rua da Boavista 123 1ºD 4000-123 Porto Portugal
+913567890
+Ana Pereira
+Rua das Flores 10 3ºFrt 8000-200 Faro Portugal
+914678901
+Carlos Sousa
+Rua de Santa Maria 5 2ºDto 3000-123 Coimbra Portugal
+915789012
+Sara Oliveira
+Largo do Carmo 34 1º 1100-204 Lisboa Portugal
+916890123
+Rui Costa
+Rua José Falcão 78 R/C 4700-123 Braga Portugal
+917901234
+Inês Lopes
+Rua Dr. Francisco Sá Carneiro 56 2º 2720-093 Amadora Portugal
+918012345
+Tiago Nogueira
+Rua da Alegria 45 1ºDto 4000-012 Porto Portugal
+919123456
+Vera Martins
+Rua Nova de Santa Cruz 23 3ºFrt 4700-239 Braga Portugal
+911234567
+Miguel Afonso
+Travessa da Senhora da Glória 7 2ºEsq 1170-247 Lisboa Portugal
+912345789
+Filipa Rodrigues
+Rua Direita 89 1ºDto 2900-123 Setúbal Portugal
+913456890
+André Gomes
+Avenida 25 de Abril 12 2ºFrt 8500-123 Portimão Portugal
+914567901
+Patrícia Ribeiro
+Praça de Londres 13 3ºEsq 1000-234 Lisboa Portugal
+915678012
+Ricardo Teixeira
+Rua da Bela Vista 123 1º 4000-234 Porto Portugal
+916789123
+Mariana Mendes
+Rua General Humberto Delgado 56 R/C 4710-283 Braga Portugal
+917890234
+José Barbosa
+Avenida da República 77 1ºFrt 1050-099 Lisboa Portugal
+918901345
+Helena Figueiredo
+Rua das Laranjeiras 23 2ºDto 1350-123 Lisboa Portugal
+919012456
+Bruno Pires
+Rua do Heroísmo 89 3º 4200-123 Porto Portugal
+911345678
+Cláudia Neves
+Rua de São João 32 1º 1100-421 Lisboa Portugal
+912456789
+Joana Faria
+Avenida Infante D. Henrique 89 1ºDto 1149-014 Lisboa Portugal
+913567891
+Gonçalo Fonseca
+Rua da Constituição 67 2ºEsq 4000-209 Porto Portugal
+914678902
+Carla Cunha
+Rua do Almada 23 3ºFrt 4700-308 Braga Portugal
+915789013
+Paulo Mota
+Travessa do Carmo 15 R/C 1250-021 Lisboa Portugal
+916890234
+Raquel Matos
+Rua de São Paulo 56 2ºEsq 1200-120 Lisboa Portugal
+917901245
+Luis Dias
+Rua do Comércio 67 1ºFrt 4520-020 Santa Maria da Feira Portugal
+918012356
+Cristina Costa
+Rua de São Bento 34 3ºEsq 1250-145 Lisboa Portugal
+919123567
+Bruno Andrade
+Largo da Sé 12 2ºDto 4050-573 Porto Portugal
+911234678
+Catarina Antunes
+Rua de Cedofeita 89 1º 4050-181 Porto Portugal
+912345890
+Diogo Monteiro
+Rua de São Julião 123 2ºEsq 1100-151 Lisboa Portugal
+913456901
+Beatriz Freitas
+Rua Serpa Pinto 56 R/C 2870-126 Montijo Portugal
+914567912
+Vasco Correia
+Rua da Glória 10 2ºFrt 1250-114 Lisboa Portugal
+915678123
+Daniel Castro
+Avenida Marechal Gomes da Costa 34 1ºFrt 4150-119 Porto Portugal
+916789234
+Alexandra Cardoso
+Rua de São Lourenço 123 3ºDto 4700-272 Braga Portugal
+917890345
+Manuel Coelho
+Rua da Fábrica 78 2ºEsq 4000-201 Porto Portugal
+918901456
+Marta Leal
+Rua António Augusto Aguiar 45 1ºEsq 1050-012 Lisboa Portugal
+919012567
+Sofia Gomes
+Rua do Campo Alegre 56 3ºFrt 4150-179 Porto Portugal
+911345789
+Rafael Macedo
+Rua Augusto Rosa 12 2º 1100-107 Lisboa Portugal
+912456890
+Susana Vieira
+Avenida de Roma 67 1ºDto 1700-101 Lisboa Portugal
+913567902
+Miguel Correia
+Rua da Trindade 78 R/C 1200-108 Lisboa Portugal
+914678013
+Diana Campos
+Rua de São Sebastião 56 2ºDto 4710-120 Braga Portugal
+915789124
+Henrique Pinto
+Rua José Malhoa 89 1º 1070-158 Lisboa Portugal
+916890345
+Eduardo Santos
+Rua do Almargem 12 3ºFrt 2500-324 Caldas da Rainha Portugal
+917901456
+Teresa Rodrigues
+Rua do Ouro 45 1ºEsq 1100-098 Lisboa Portugal
+918012567
+Cláudio Rocha
+Avenida dos Aliados 34 2ºFrt 4000-065 Porto Portugal
+919123678
+Patrícia Vieira
+Rua D. João IV 78 3ºDto 4000-296 Porto Portugal
+911234789
+David Martins
+Rua de Santo António 12 1º 9000-019 Funchal Portugal
+912345901
+Sandra Marques
+Rua do Sol 45 2ºEsq 1100-587 Lisboa Portugal
+913456912
+Rodrigo Tavares
+Rua da Assunção 67 3ºDto 1200-226 Lisboa Portugal
+914567023
+Clara Lopes
+Rua Miguel Bombarda 89 2ºFrt 2900-345 Setúbal Portugal
+915678234
+Tomás Ferreira
+Avenida 24 de Julho 12 R/C 1200-479 Lisboa Portugal
+916789345
+Marisa Oliveira
+Rua dos Navegantes 78 1ºDto 2760-058 Oeiras Portugal
+917890456
+Fábio Ribeiro
+Rua do Alecrim 23 2ºFrt 1200-015 Lisboa Portugal
+918901567
+Célia Sousa
+Rua do Carmo 34 1ºEsq 1100-001 Lisboa Portugal
+919012678
+Leonor Marques
+Rua da Madalena 56 2ºDto 1100-318 Lisboa Portugal
+911345890
+Ricardo Mendes
+Rua do Almada 78 3ºFrt 4000-196 Porto Portugal
+912456901
+Daniela Pinto
+Rua de São Mamede 12 1ºEsq 1100-533 Lisboa Portugal
+913567013
+José Lourenço
+Rua de Cedofeita 45 2ºFrt 4050-186 Porto Portugal
+914678124
+Tiago Magalhães
+Avenida 5 de Outubro 56 3ºDto 1050-068 Lisboa Portugal
+915789235
+Liliana Carvalho
+Rua do Heroísmo 89 1º 4300-259 Porto Portugal
+916890456
+Rita Fonseca
+Rua da Alegria 23 2ºEsq 4000-010 Porto Portugal
+917901567
+Jorge Figueiredo
+Rua Dom Manuel II 45 1ºFrt 4050-345 Porto Portugal
+918012678
+Susana Ferreira
+Rua do Forno do Tijolo 67 2ºFrt 1170-271 Lisboa Portugal
+919123789
+Bruno Vieira
+Rua dos Fanqueiros 23 3ºEsq 1100-231 Lisboa Portugal
+911234890
+Carolina Mendes
+Rua do Almada 78 R/C 4000-312 Porto Portugal
+912345012
+João Azevedo
+Rua de São Marçal 45 2ºDto 1200-421 Lisboa Portugal
+913456123
+André Ribeiro
+Rua da Restauração 12 1ºFrt 4050-503 Porto Portugal
+914567134
+Mariana Silva
+Rua de São João 67 3ºFrt 1100-526 Lisboa Portugal
+915678345
+Diogo Pires
+Rua dos Capelistas 34 2ºEsq 4700-304 Braga Portugal
+916789456
+Bárbara Araújo
+Rua do Loureiro 12 1ºEsq 4000-328 Porto Portugal
+917890567
+Luís Almeida
+Avenida da Liberdade 56 2ºDto 1250-145 Lisboa Portugal
+918901678
+Francisco Cardoso
+Rua das Virtudes 78 3ºFrt 4050-158 Porto Portugal
+919012789
+Ana Pacheco
+Rua do Infante 23 2ºEsq 4150-579 Porto Portugal
+911345012
+Nuno Duarte
+Rua de Santo Ildefonso 34 1ºDto 4000-471 Porto Portugal
+912456134
+Carla Monteiro
+Rua do Almada 12 3ºFrt 4000-097 Porto Portugal
+913567245
+Sérgio Alves
+Rua do Duque de Loulé 45 2ºEsq 1050-085 Lisboa Portugal
+914678345
+Filipe Matos
+Rua de São Julião 78 1ºFrt 1100-203 Lisboa Portugal
+915789456
+Daniel Mendes
+Rua do Bonjardim 23 2ºDto 4000-126 Porto Portugal
+916890567
+Inês Carvalho
+Rua de Dom João IV 56 3ºFrt 4000-296 Porto Portugal
+917901678
+Rita Teixeira
+Rua Nova de São João 67 1ºEsq 1100-129 Lisboa Portugal
+918012789
+Pedro Nunes
+Rua das Andorinhas 45 2ºFrt 2750-008 Cascais Portugal
+919123890
+Helena Afonso
+Rua do Bonfim 34 3ºDto 4300-091 Porto Portugal
+911234012
+Mariana Duarte
+Rua da Palmeira 12 1ºEsq 1200-213 Lisboa Portugal
+912345245
+Fernando Morais
+Rua das Cruzes 56 2ºFrt 4050-125 Porto Portugal
+913456345
+Cristina Santos
+Rua do Carvalho 23 3ºFrt 4700-319 Braga Portugal
+914567456
+Fábio Cardoso
+Rua D. Pedro V 78 2ºDto 1250-093 Lisboa Portugal
+915678567
+Sara Neves
+Avenida dos Combatentes 45 1ºEsq 1700-090 Lisboa Portugal
+916789678
+Manuel Martins
+Rua do Sol 34 3ºFrt 4050-578 Porto Portugal
+917890789
+Miguel Barros
+Avenida da Boavista 89 1ºDto 4100-122 Porto Portugal
+918901890
+Cláudia Martins
+Rua da Saudade 12 2ºFrt 1100-200 Lisboa Portugal
+919012901
+Sandra Silva
+Rua das Olarias 56 2ºEsq 1000-412 Lisboa Portugal
+911234567
+Ricardo Pinto
+Avenida dos Aliados 45 1ºFrt 4050-085 Porto Portugal
+912345678
+Joana Costa
+Rua da Vitória 23 3ºDto 3000-321 Coimbra Portugal
+913456789
+Pedro Nascimento
+Rua do Alto 89 2º 1100-013 Lisboa Portugal
+914567890
+Ana Marques
+Rua dos Anjos 12 1º 1170-123 Lisboa Portugal
+915678901
+Tiago Almeida
+Rua de São Bento 78 2ºDto 1200-334 Lisboa Portugal
+916789012
+Inês Pereira
+Rua do Norte 45 3ºFrt 4700-345 Braga Portugal
+917890123
+Miguel Silva
+Rua de Cedofeita 34 1ºDto 4050-091 Porto Portugal
+918901234
+Cláudia Costa
+Rua da Escola 56 2º 2900-001 Setúbal Portugal
+919012345
+Fábio Rodrigues
+Rua da Alegria 78 3ºEsq 4000-271 Porto Portugal
+911123456
+Alice Ventura
+Rua da Camera 21 R/C Braga
+965328753
