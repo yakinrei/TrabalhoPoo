@@ -107,6 +107,7 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
 
             return nome;
         }
+
         public void Ft_CarregaAcervo()
         {
             string filePath = projectDirectory + $"\\{this.name}\\acervo.txt";
