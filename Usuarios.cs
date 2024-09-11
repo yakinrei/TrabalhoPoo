@@ -10,10 +10,10 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
 {
     internal class Usuarios
     {
-        public uint Id { get; set; }
-        public string Nome { get; set; }
-        public string Endereco { get; set; }
-        public string Contato { get; set; }
+        private uint Id { get; set; }
+        private string Nome { get; set; }
+        private string Endereco { get; set; }
+        private string Contato { get; set; }
 
 
         public Usuarios() : this(Ft_VerificaNome(), Ft_VerificaEndereco(), Ft_VerificaTelemovel()) { }
@@ -29,18 +29,18 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
 
         private static string Ft_VerificaNome()
         {
-            string nome;
+            string nome2;
             bool verifica = false;
             Regex regex = new Regex(@"^[a-zA-Z\s]+$"); // Permite apenas letras e espaços
 
             do
             {
                 Console.Write("Insira o Nome do Usuário: ");
-                nome = Console.ReadLine();
-                nome = nome.Trim();
+                nome2 = Console.ReadLine();
+                nome2 = nome2.Trim();
 
                 // Verifica se o nome é válido (não nulo e não contém caracteres especiais)
-                verifica = !string.IsNullOrEmpty(nome) && regex.IsMatch(nome);
+                verifica = !string.IsNullOrEmpty(nome2) && regex.IsMatch(nome2);
 
                 if (!verifica)
                 {
@@ -51,12 +51,12 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
                 {
                     // Formata o nome: primeira letra de cada palavra maiúscula e restante minúscula
                     TextInfo textInfo = CultureInfo.CurrentCulture.TextInfo;
-                    nome = textInfo.ToTitleCase(nome.ToLower());
+                    nome2 = textInfo.ToTitleCase(nome2.ToLower());
                 }
 
             } while (!verifica);
 
-            return nome;
+            return nome2;
         }
 
         private static string Ft_VerificaEndereco()
@@ -122,6 +122,33 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
 
             } while (!verifica);
             return telemovel;
+        }
+
+        public string Ft_GetNome() 
+        { 
+            return this.Nome; 
+        }
+        public uint Ft_GetId() 
+        { 
+            return this.Id; 
+        }
+        public string Ft_GetContato() 
+        {
+            return this.Contato; 
+        }
+        public string Ft_GetMorada() 
+        { 
+            return this.Endereco; 
+        }
+        public void Ft_ExibirInformacoes()
+        {
+            Console.WriteLine($"Usuário: {Ft_GetNome(),-40} Nº Usuário: {Ft_GetId().ToString("D5"),10}");
+        }
+        public void Ft_FullExibirInformacoes()
+        {
+            Console.WriteLine($"Usuário: {Ft_GetNome(),-40} Nº Usuário: {Ft_GetId().ToString("D5"),10}");
+            Console.WriteLine($"Morada: {Ft_GetMorada()}");
+            Console.WriteLine($"Contato: {Ft_GetContato()}");
         }
     }
 }

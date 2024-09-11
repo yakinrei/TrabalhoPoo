@@ -8,9 +8,9 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
 {
     internal class Emprestimos
     {
-        public Livros LivroEmprestado { get; set; }
-        public Usuarios UsuarioRequerinte { get; set; }
-        public DateTime DataEmprestimo { get; set; }
+        private Livros LivroEmprestado { get; set; }
+        private Usuarios UsuarioRequerinte { get; set; }
+        private DateTime DataEmprestimo { get; set; }
 
         public Emprestimos(Livros LE, Usuarios UR)
         {
@@ -23,6 +23,42 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
             LivroEmprestado = LE;
             UsuarioRequerinte = UR;
             DataEmprestimo = DT;
+        }
+
+        public Livros Ft_GetLivro()
+        { 
+            return LivroEmprestado; 
+        }
+
+        public Usuarios Ft_GetUsuario() 
+        { 
+            return UsuarioRequerinte; 
+        }
+
+        public DateTime Ft_GetDataEmprestimo() 
+        { 
+            return DataEmprestimo; 
+        }
+
+        public void Ft_ExibirInformacoesAtraso()
+        {
+            Ft_GetUsuario().Ft_FullExibirInformacoes();
+            Ft_GetLivro().Ft_ExibirInformacoes();
+            Console.WriteLine($"Data de Empréstimo: {(Ft_GetDataEmprestimo().Day > 9 ? Ft_GetDataEmprestimo().Day : "0" + Ft_GetDataEmprestimo().Day)}/{(Ft_GetDataEmprestimo().Month > 9 ? Ft_GetDataEmprestimo().Month : "0" + Ft_GetDataEmprestimo().Month)}/{Ft_GetDataEmprestimo().Year,-23}");
+            Console.WriteLine("");
+        }
+
+        public void Ft_ExibirInformacoesUsuario()
+        {
+            Console.WriteLine($"Data de Empréstimo: {(Ft_GetDataEmprestimo().Day > 9 ? Ft_GetDataEmprestimo().Day : "0" + Ft_GetDataEmprestimo().Day)}/{(Ft_GetDataEmprestimo().Month > 9 ? Ft_GetDataEmprestimo().Month : "0" + Ft_GetDataEmprestimo().Month)}/{Ft_GetDataEmprestimo().Year,-23}");
+            Ft_GetUsuario().Ft_ExibirInformacoes();
+            Console.WriteLine("");
+        }
+
+        public void Ft_ExibirInformacoesLivro()
+        {
+            Ft_GetLivro().Ft_ExibirInformacoes();
+            Console.Write($"Data de Empréstimo: {(Ft_GetDataEmprestimo().Day > 9 ? Ft_GetDataEmprestimo().Day : "0" + Ft_GetDataEmprestimo().Day)}/{(Ft_GetDataEmprestimo().Month > 9 ? Ft_GetDataEmprestimo().Month : "0" + Ft_GetDataEmprestimo().Month)}/{Ft_GetDataEmprestimo().Year,-23}");
         }
     }
 }

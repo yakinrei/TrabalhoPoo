@@ -10,11 +10,11 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
 {
     internal class Livros
     {
-        public uint Id { get; set; }
-        public string Titulo { get; set; }
-        public string Autor { get; set; }
-        public int Ano { get; set; }
-        public int Copias { get; set; }
+        private uint Id { get; set; }
+        private string Titulo { get; set; }
+        private string Autor { get; set; }
+        private int Ano { get; set; }
+        private int Copias { get; set; }
         public int CopiasEmprestadas { get; set; }
 
 
@@ -144,5 +144,36 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
             return numeroCopias;
         }
 
+        public uint Ft_GetId() 
+        { 
+            return this.Id; 
+        }
+        public string Ft_GetTitulo()
+        {
+            return this.Titulo;
+        }
+        public int Ft_GetAno()
+        {
+            return this.Ano;
+        }
+        public string Ft_GetAutor()
+        {
+            return this.Autor;
+        }
+        public int Ft_GetCopias()
+        {
+            return this.Copias;
+        }
+
+        public void Ft_ExibirInformacoes()
+        {
+            Console.WriteLine($"Livro: {Ft_GetTitulo(),-42} Código do Livro: {Ft_GetId().ToString("D5"),5}");
+        }
+
+        public void Ft_FullExibirInformacoes()
+        {
+            Console.WriteLine($"Livro: {Ft_GetTitulo(),-42} Código do Livro: {Ft_GetId().ToString("D5"),5}");
+            Console.WriteLine($"Autor: {Ft_GetAutor(),-42} {Ft_GetCopias()-CopiasEmprestadas} de {Ft_GetCopias()} disponiveis");
+        }
     }
 }

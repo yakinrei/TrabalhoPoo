@@ -245,13 +245,13 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
             {
                 foreach (var item in Acervo)
                 {
-                    linha = new UTF8Encoding(true).GetBytes(item.Titulo + "\n");
+                    linha = new UTF8Encoding(true).GetBytes(item.Ft_GetTitulo() + "\n");
                     fs.Write(linha, 0, linha.Length);
-                    linha = new UTF8Encoding(true).GetBytes(item.Autor + "\n");
+                    linha = new UTF8Encoding(true).GetBytes(item.Ft_GetAutor() + "\n");
                     fs.Write(linha, 0, linha.Length);
-                    linha = new UTF8Encoding(true).GetBytes(item.Ano.ToString() + "\n");
+                    linha = new UTF8Encoding(true).GetBytes(item.Ft_GetAno().ToString() + "\n");
                     fs.Write(linha, 0, linha.Length);
-                    linha = new UTF8Encoding(true).GetBytes(item.Copias.ToString() + "\n");
+                    linha = new UTF8Encoding(true).GetBytes(item.Ft_GetCopias().ToString() + "\n");
                     fs.Write(linha, 0, linha.Length);
                 }
             }
@@ -261,11 +261,11 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
             {
                 foreach (var item in Utentes)
                 {
-                    linha = new UTF8Encoding(true).GetBytes(item.Nome + "\n");
+                    linha = new UTF8Encoding(true).GetBytes(item.Ft_GetNome() + "\n");
                     fs.Write(linha, 0, linha.Length);
-                    linha = new UTF8Encoding(true).GetBytes(item.Endereco + "\n");
+                    linha = new UTF8Encoding(true).GetBytes(item.Ft_GetMorada() + "\n");
                     fs.Write(linha, 0, linha.Length);
-                    linha = new UTF8Encoding(true).GetBytes(item.Contato + "\n");
+                    linha = new UTF8Encoding(true).GetBytes(item.Ft_GetContato() + "\n");
                     fs.Write(linha, 0, linha.Length);
                 }
             }
@@ -275,11 +275,11 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
             {
                 foreach (var item in EmprestimosAtivos)
                 {
-                    linha = new UTF8Encoding(true).GetBytes(item.UsuarioRequerinte.Id.ToString() + "\n");
+                    linha = new UTF8Encoding(true).GetBytes(item.Ft_GetUsuario().Ft_GetId().ToString() + "\n");
                     fs.Write(linha, 0, linha.Length);
-                    linha = new UTF8Encoding(true).GetBytes(item.LivroEmprestado.Id.ToString() + "\n");
+                    linha = new UTF8Encoding(true).GetBytes(item.Ft_GetLivro().Ft_GetId().ToString() + "\n");
                     fs.Write(linha, 0, linha.Length);
-                    linha = new UTF8Encoding(true).GetBytes(item.DataEmprestimo.Year + "-" + (item.DataEmprestimo.Month >= 10 ? item.DataEmprestimo.Month : "0" + item.DataEmprestimo.Month) + "-" + (item.DataEmprestimo.Day >= 10 ? item.DataEmprestimo.Day : "0" + item.DataEmprestimo.Day) + "\n");
+                    linha = new UTF8Encoding(true).GetBytes(item.Ft_GetDataEmprestimo().Year + "-" + (item.Ft_GetDataEmprestimo().Month >= 10 ? item.Ft_GetDataEmprestimo().Month : "0" + item.Ft_GetDataEmprestimo().Month) + "-" + (item.Ft_GetDataEmprestimo().Day >= 10 ? item.Ft_GetDataEmprestimo().Day : "0" + item.Ft_GetDataEmprestimo().Day) + "\n");
                     fs.Write(linha, 0, linha.Length);
                 }
             }
@@ -325,7 +325,7 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
 
             foreach (var item in Utentes)
             {
-                if (item.Id == idusuario)
+                if (item.Ft_GetId() == idusuario)
                 {
                     solicitante = item;
                     break;
@@ -340,7 +340,7 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
 
             foreach (var item in Utentes)
             {
-                if (item.Nome == usuario)
+                if (item.Ft_GetNome() == usuario)
                 {
                     solicitante = item;
                     break;
@@ -355,7 +355,7 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
 
             foreach (var item in Acervo)
             {
-                if (item.Id == idlivro)
+                if (item.Ft_GetId() == idlivro)
                 {
                     emprestado = item;
                     break;
@@ -370,7 +370,7 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
 
             foreach (var item in Acervo)
             {
-                if (item.Titulo == titulo)
+                if (item.Ft_GetTitulo() == titulo)
                 {
                     emprestado = item;
                     break;
@@ -393,7 +393,7 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
         {
             Acervo.Add(new Livros());
 
-            Console.WriteLine($"Livro '{Acervo[Acervo.Count - 1].Titulo}' registrado.\n");
+            Console.WriteLine($"Livro '{Acervo[Acervo.Count - 1].Ft_GetTitulo()}' registrado.\n");
         }
 
         public void Ft_RegistrarUtente(string nome, string endereco, string contato)
@@ -405,7 +405,7 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
         public void Ft_RegistrarUtente()
         {
             Utentes.Add(new Usuarios());
-            Console.WriteLine($"Utente '{Utentes[Utentes.Count - 1].Nome}' registrado.\n");
+            Console.WriteLine($"Utente '{Utentes[Utentes.Count - 1].Ft_GetNome()}' registrado.\n");
         }
         #endregion
         
@@ -417,9 +417,9 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
                 Console.WriteLine("Livro não disponível");
                 return false;
             }
-            else if (livro.Copias > livro.CopiasEmprestadas)
+            else if (livro.Ft_GetCopias() > livro.CopiasEmprestadas)
             {
-                Console.WriteLine($"Existem {livro.Copias - livro.CopiasEmprestadas} cópias do livro {livro.Titulo} disponiveis");
+                Console.WriteLine($"Existem {livro.Ft_GetCopias() - livro.CopiasEmprestadas} cópias do livro {livro.Ft_GetTitulo()} disponiveis");
                 return true;
             }
             else
@@ -450,11 +450,11 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
                 {
                     EmprestimosAtivos.Add(new Emprestimos(requerido, solicitante));
                     requerido.CopiasEmprestadas++;
-                    Console.WriteLine($"Livro '{requerido.Titulo}' emprestado para {solicitante.Nome}.\n");
+                    Console.WriteLine($"Livro '{requerido.Ft_GetTitulo()}' emprestado para {solicitante.Ft_GetNome()}.\n");
                     return;
                 }
             }
-            Console.WriteLine($"Livro: {requerido.Titulo} não está disponível.\n");
+            Console.WriteLine($"Livro: {requerido.Ft_GetTitulo()} não está disponível.\n");
         }
 
         public void Ft_ProcessaEmprestimo(Livros livro, Usuarios usuario, DateTime DT)
@@ -484,11 +484,11 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
             {
                 foreach (var item in EmprestimosAtivos)
                 {
-                    if (item.LivroEmprestado == devolvido && item.UsuarioRequerinte == solicitante)
+                    if (item.Ft_GetLivro() == devolvido && item.Ft_GetUsuario() == solicitante)
                     {
                         devolvido.CopiasEmprestadas--;
                         Devolucao = item;
-                        Console.WriteLine($"Livro '{devolvido.Titulo}' devolvido por {solicitante.Nome}.\n");
+                        Console.WriteLine($"Livro '{devolvido.Ft_GetTitulo()}' devolvido por {solicitante.Ft_GetNome()}.\n");
                         break;
                     }
                 }
@@ -498,7 +498,7 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
                 }
                 else
                 {
-                    Console.WriteLine($"Usuário {solicitante.Nome} não se encontra em posse do livro '{devolvido.Titulo}'.\n");
+                    Console.WriteLine($"Usuário {solicitante.Ft_GetNome()} não se encontra em posse do livro '{devolvido.Ft_GetTitulo()}'.\n");
                 }
             }
         }
@@ -517,18 +517,15 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
             }
 
             Console.WriteLine("Relatório de Empréstimo:");
-            Console.WriteLine("");
-            Console.WriteLine($"Usuário: {solicitante.Nome,-40} Nº Usuário: {solicitante.Id.ToString("D5"),10}");
-            Console.WriteLine($"Contato: {solicitante.Contato}");
-            
+            solicitante.Ft_ExibirInformacoes();
+
             bool emprestado = false;
             foreach (var item in EmprestimosAtivos)
             {
-                TimeSpan Dias = DateTime.Now - item.DataEmprestimo;
-                if (solicitante == item.UsuarioRequerinte)
+                TimeSpan Dias = DateTime.Now - item.Ft_GetDataEmprestimo();
+                if (solicitante == item.Ft_GetUsuario())
                 {
-                    Console.WriteLine($"Livro: {item.LivroEmprestado.Titulo,-42} Código do Livro: {item.LivroEmprestado.Id.ToString("D5"),5}");
-                    Console.Write($"Data de Empréstimo: {(item.DataEmprestimo.Day > 9 ? item.DataEmprestimo.Day : "0" + item.DataEmprestimo.Day)}/{(item.DataEmprestimo.Month > 9 ? item.DataEmprestimo.Month : "0" + item.DataEmprestimo.Month)}/{item.DataEmprestimo.Year,-23}");
+                    item.Ft_ExibirInformacoesLivro();
                     Console.WriteLine($"{(Dias.Days > 7 ?" - EM ATRASO" : "")}");
                     emprestado = true;
                 }
@@ -551,17 +548,13 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
             }
 
             Console.WriteLine("Verificando Disponibilidade:");
-            Console.WriteLine($"Livro: {relatado.Titulo,-42} Código do Livro: {relatado.Id.ToString("D5"),5}");
-            Console.WriteLine($"Cópias Disponíveis: {relatado.Copias-relatado.CopiasEmprestadas}");
+            relatado.Ft_FullExibirInformacoes();
             bool emprestado = false;
             foreach (var item in EmprestimosAtivos)
             {
-                if (relatado == item.LivroEmprestado)
+                if (relatado == item.Ft_GetLivro())
                 {
-                    Console.WriteLine($"Data de Empréstimo: {(item.DataEmprestimo.Day > 9 ? item.DataEmprestimo.Day : "0" + item.DataEmprestimo.Day)}/{(item.DataEmprestimo.Month > 9 ? item.DataEmprestimo.Month : "0" + item.DataEmprestimo.Month)}/{item.DataEmprestimo.Year,-23}");
-                    Console.WriteLine($"Usuário: {item.UsuarioRequerinte.Nome,-40} Nº Usuário: {item.UsuarioRequerinte.Id.ToString("D5"),10}");
-                    Console.WriteLine($"Contato: {item.UsuarioRequerinte.Contato}");
-                    Console.WriteLine("");
+                    item.Ft_ExibirInformacoesUsuario();
                     emprestado = true;
                 }
             }
@@ -575,19 +568,15 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
         public void Ft_GerarRelatoriodeEmprestimo3()
         {
             Console.WriteLine("Relatório de Empréstimos Vencidos (mais de 7 dias):");
-
+            Console.WriteLine("");
             bool emprestado = false;
             foreach (var item in EmprestimosAtivos)
             {
-                TimeSpan diferencaDias = DateTime.Now - item.DataEmprestimo;
+                TimeSpan diferencaDias = DateTime.Now - item.Ft_GetDataEmprestimo();
 
                 if (diferencaDias.Days > 7)
                 {
-                    Console.WriteLine($"Usuário: {item.UsuarioRequerinte.Nome,-40} Nº Usuário: {item.UsuarioRequerinte.Id.ToString("D5"),10}");
-                    Console.WriteLine($"Livro: {item.LivroEmprestado.Titulo,-42} Código do Livro: {item.LivroEmprestado.Id.ToString("D5"),5}");
-                    Console.WriteLine($"Data de Empréstimo: {(item.DataEmprestimo.Day>9?item.DataEmprestimo.Day:"0"+item.DataEmprestimo.Day)}/{(item.DataEmprestimo.Month>9? item.DataEmprestimo.Month:"0"+ item.DataEmprestimo.Month)}/{item.DataEmprestimo.Year,-23} Dias de Empréstimo: {diferencaDias.Days,1} dias");
-                    Console.WriteLine($"Contato: {item.UsuarioRequerinte.Contato}");
-                    Console.WriteLine("");
+                    item.Ft_ExibirInformacoesAtraso();
                     emprestado = true;
                 }
             }
