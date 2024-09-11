@@ -29,35 +29,56 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
 
         private static string Ft_VerificaNome()
         {
-            string nome2;
+            string nome;
             bool verifica = false;
-            Regex regex = new Regex(@"^[a-zA-Z\s]+$"); // Permite apenas letras e espaços
+
+            // Permite letras (com e sem acento) e espaços
+            Regex regex = new Regex(@"^[a-zA-ZÀ-ÖØ-öø-ÿ\s]+$");
+
+            // Lista de palavras comuns que devem ficar em minúsculo no meio do nome
+            string[] palavrasMinusculas = { "de", "da", "do", "dos", "das" };
 
             do
             {
-                Console.Write("Insira o Nome do Usuário: ");
-                nome2 = Console.ReadLine();
-                nome2 = nome2.Trim();
+                Console.Write("Insira o Nome do Utente: ");
+                nome = Console.ReadLine();
+                nome = nome.Trim();
 
-                // Verifica se o nome é válido (não nulo e não contém caracteres especiais)
-                verifica = !string.IsNullOrEmpty(nome2) && regex.IsMatch(nome2);
+                // Remove múltiplos espaços entre palavras
+                nome = Regex.Replace(nome, @"\s+", " ");
+
+                // Verifica se o nome é válido (não nulo, contém apenas letras e espaços, e tem comprimento adequado)
+                verifica = !string.IsNullOrEmpty(nome) && regex.IsMatch(nome) && nome.Length >= 3 && nome.Length <= 50;
 
                 if (!verifica)
                 {
                     Console.Clear();
-                    Console.WriteLine("Nome Inválido. O nome deve conter apenas letras e espaços.");
+                    Console.WriteLine("Nome inválido. O nome deve conter apenas letras e espaços, com no mínimo 3 e no máximo 50 caracteres.");
                 }
                 else
                 {
-                    // Formata o nome: primeira letra de cada palavra maiúscula e restante minúscula
+                    // Formatar o nome
                     TextInfo textInfo = CultureInfo.CurrentCulture.TextInfo;
-                    nome2 = textInfo.ToTitleCase(nome2.ToLower());
+                    string[] palavras = nome.ToLower().Split(' ');
+
+                    // Capitaliza a primeira palavra e demais palavras exceto as da lista de palavrasMinusculas
+                    for (int i = 0; i < palavras.Length; i++)
+                    {
+                        if (i == 0 || !Array.Exists(palavrasMinusculas, p => p == palavras[i]))
+                        {
+                            palavras[i] = textInfo.ToTitleCase(palavras[i]);
+                        }
+                    }
+
+                    // Junta o nome novamente
+                    nome = string.Join(" ", palavras);
                 }
 
             } while (!verifica);
 
-            return nome2;
+            return nome;
         }
+
 
         private static string Ft_VerificaEndereco()
         {

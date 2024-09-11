@@ -19,6 +19,8 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
 
 
         public Livros() : this(Ft_VerificaTituloLivro(), Ft_VerificaNome(), Ft_VerificaAno(), Ft_VerificaNumeroCopias()) { }
+        
+
         public Livros(string titulo, string autor, int ano, int copias)
         {
             Titulo = titulo;
@@ -35,8 +37,11 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
             string titulo;
             bool verifica = false;
 
-            // Permite letras, números, espaços e caracteres especiais
-            Regex regex = new Regex(@"^[a-zA-Z0-9\s,.!?;:'""\-()]+$");
+            // Permite letras (acentuadas e sem acento), números, espaços e caracteres especiais
+            Regex regex = new Regex(@"^[a-zA-ZÀ-ÖØ-öø-ÿ0-9\s,.!?;:'""\-()]+$");
+
+            // Palavras que não devem ser capitalizadas no meio do título
+            string[] palavrasMinusculas = { "de", "da", "do", "e", "das", "dos"};
 
             do
             {
@@ -44,19 +49,34 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
                 titulo = Console.ReadLine();
                 titulo = titulo.Trim();
 
-                // Verifica se o título é válido (não nulo e contém apenas caracteres permitidos)
-                verifica = !string.IsNullOrEmpty(titulo) && regex.IsMatch(titulo);
+                // Remover múltiplos espaços
+                titulo = Regex.Replace(titulo, @"\s+", " ");
+
+                // Verifica se o título é válido (não nulo, contém caracteres permitidos e tamanho adequado)
+                verifica = !string.IsNullOrEmpty(titulo) && regex.IsMatch(titulo) && titulo.Length >= 5 && titulo.Length <= 100;
 
                 if (!verifica)
                 {
                     Console.Clear();
-                    Console.WriteLine("Título inválido. O título deve conter apenas letras, números e caracteres permitidos.");
+                    Console.WriteLine("Título inválido. O título deve conter letras, números, acentos e caracteres permitidos, com no mínimo 5 e no máximo 100 caracteres.");
                 }
                 else
                 {
-                    // Formata o título: primeira letra de cada palavra maiúscula e restante minúscula
+                    // Formatar o título
                     TextInfo textInfo = CultureInfo.CurrentCulture.TextInfo;
-                    titulo = textInfo.ToTitleCase(titulo.ToLower());
+                    string[] palavras = titulo.ToLower().Split(' ');
+
+                    // Capitaliza cada palavra, exceto as da lista de palavrasMinusculas
+                    for (int i = 0; i < palavras.Length; i++)
+                    {
+                        if (i == 0 || !Array.Exists(palavrasMinusculas, p => p == palavras[i]))
+                        {
+                            palavras[i] = textInfo.ToTitleCase(palavras[i]);
+                        }
+                    }
+
+                    // Junta o título novamente
+                    titulo = string.Join(" ", palavras);
                 }
 
             } while (!verifica);
@@ -64,11 +84,17 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
             return titulo;
         }
 
+
         private static string Ft_VerificaNome()
         {
             string nome;
             bool verifica = false;
-            Regex regex = new Regex(@"^[a-zA-Z\s]+$"); // Permite apenas letras e espaços
+
+            // Permite letras (com e sem acento) e espaços
+            Regex regex = new Regex(@"^[a-zA-ZÀ-ÖØ-öø-ÿ\s]+$");
+
+            // Lista de palavras comuns que devem ficar em minúsculo no meio do nome
+            string[] palavrasMinusculas = { "de", "da", "do", "dos", "das" };
 
             do
             {
@@ -76,25 +102,41 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
                 nome = Console.ReadLine();
                 nome = nome.Trim();
 
-                // Verifica se o nome é válido (não nulo e não contém caracteres especiais)
-                verifica = !string.IsNullOrEmpty(nome) && regex.IsMatch(nome);
+                // Remove múltiplos espaços entre palavras
+                nome = Regex.Replace(nome, @"\s+", " ");
+
+                // Verifica se o nome é válido (não nulo, contém apenas letras e espaços, e tem comprimento adequado)
+                verifica = !string.IsNullOrEmpty(nome) && regex.IsMatch(nome) && nome.Length >= 3 && nome.Length <= 50;
 
                 if (!verifica)
                 {
                     Console.Clear();
-                    Console.WriteLine("Nome Inválido. O nome deve conter apenas letras e espaços.");
+                    Console.WriteLine("Nome inválido. O nome deve conter apenas letras e espaços, com no mínimo 3 e no máximo 50 caracteres.");
                 }
                 else
                 {
-                    // Formata o nome: primeira letra de cada palavra maiúscula e restante minúscula
+                    // Formatar o nome
                     TextInfo textInfo = CultureInfo.CurrentCulture.TextInfo;
-                    nome = textInfo.ToTitleCase(nome.ToLower());
+                    string[] palavras = nome.ToLower().Split(' ');
+
+                    // Capitaliza a primeira palavra e demais palavras exceto as da lista de palavrasMinusculas
+                    for (int i = 0; i < palavras.Length; i++)
+                    {
+                        if (i == 0 || !Array.Exists(palavrasMinusculas, p => p == palavras[i]))
+                        {
+                            palavras[i] = textInfo.ToTitleCase(palavras[i]);
+                        }
+                    }
+
+                    // Junta o nome novamente
+                    nome = string.Join(" ", palavras);
                 }
 
             } while (!verifica);
 
             return nome;
         }
+
 
         private static int Ft_VerificaAno()
         {
