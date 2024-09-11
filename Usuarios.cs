@@ -85,30 +85,34 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
             string endereco;
             bool verifica = false;
 
-            // Permite letras, números, espaços, vírgulas, pontos, hífens e barras
-            Regex regex = new Regex(@"^[a-zA-Z0-9\s,.\-\/]+$");
+            // Adicionar caracteres especiais usados no português
+            Regex regex = new Regex(@"^[a-zA-Z0-9\s,.\-\/áéíóúç]+$");
+
+            // Validação do código postal no formato NNNN-NNN
+            Regex regexPostal = new Regex(@"\d{4}-\d{3}");
 
             do
             {
-                Console.Write("Insira o Endereço: ");
-                endereco = Console.ReadLine();
-                endereco = endereco.Trim();
+                // 1. Solicitar o endereço e remover espaços extras
+                endereco = Console.ReadLine().Trim();
 
-                // Verifica se o endereço é válido (não nulo e não contém caracteres especiais inválidos)
-                verifica = !string.IsNullOrEmpty(endereco) && regex.IsMatch(endereco);
+                // 2. Verificar se o endereço é válido e contém um código postal
+                verifica = !string.IsNullOrEmpty(endereco)
+                           && regex.IsMatch(endereco)
+                           && regexPostal.IsMatch(endereco);
 
+                // 3. Se inválido, mostrar mensagem de erro
                 if (!verifica)
                 {
-                    Console.Clear();
-                    Console.WriteLine("Endereço Inválido. O endereço deve conter apenas letras, números e caracteres permitidos (, . - /).");
+                    Console.WriteLine("Endereço Inválido. Deve conter apenas letras, números, caracteres permitidos, e um código postal no formato NNNN-NNN.");
                 }
                 else
                 {
-                    // Formata o endereço: primeira letra de cada palavra maiúscula, exceto artigos e preposições
+                    // 4. Formatar o endereço (primeiras letras maiúsculas, exceções)
                     TextInfo textInfo = CultureInfo.CurrentCulture.TextInfo;
                     endereco = textInfo.ToTitleCase(endereco.ToLower());
 
-                    // Exceções para palavras comuns em endereços que não devem ser capitalizadas
+                    // Exceções para palavras que não devem ser capitalizadas
                     string[] excecoes = { "de", "do", "da", "das", "dos", "e", "a", "à", "o", "os" };
                     foreach (string palavra in excecoes)
                     {
