@@ -594,6 +594,16 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
         public uint Ft_ExibirMenu()
         {
             uint comando;
+            int totalLength = 30;
+            int nameLength = name.Length;
+
+            // Calcula o número de '>' e '<' necessários
+            int padding = (totalLength - nameLength - 11) / 2;
+            string greaterThan = new string('>', padding);  // Cria a string '>'
+            string lessThan = new string('<', padding);  // Cria a string '<'
+
+            // Imprime a string formatada
+            Console.WriteLine($"{greaterThan}Bilioteca {name}{lessThan}");
             Console.WriteLine($"[1] Registrar Livro");
             Console.WriteLine($"[2] Registrar Usuário");
             Console.WriteLine($"[3] Verificar Disponibilidade");
