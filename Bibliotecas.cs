@@ -451,11 +451,13 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
             if (solicitante == null)
             {
                 Console.WriteLine("Usuário não encontrado");
+                Console.WriteLine("");
                 return;
             }
             else if (requerido == null)
             {
                 Console.WriteLine("Livro não encontrado");
+                Console.WriteLine("");
                 return;
             }
             else
@@ -464,6 +466,7 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
                 {
                     EmprestimosAtivos.Add(new Emprestimos(requerido, solicitante));
                     requerido.Ft_EmprestaLivro();
+                    Console.WriteLine("");
                     Console.WriteLine($"Livro '{requerido.Ft_GetTitulo()}' emprestado para {solicitante.Ft_GetNome()}.\n");
                     return;
                 }
@@ -528,6 +531,7 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
             if (solicitante == null)
             {
                 Console.WriteLine("Usuário não encontrado");
+                Console.WriteLine("");
                 return;
             }
 
@@ -540,6 +544,7 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
                 TimeSpan Dias = DateTime.Now - item.Ft_GetDataEmprestimo();
                 if (solicitante == item.Ft_GetUsuario())
                 {
+                    Console.WriteLine("");
                     item.Ft_ExibirInformacoesLivro();
                     Console.WriteLine($"{(Dias.Days > 7 ?" - EM ATRASO" : "")}");
                     emprestado = true;
@@ -563,6 +568,7 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
             }
 
             Console.WriteLine("Verificando Disponibilidade:");
+            Console.WriteLine("");
             relatado.Ft_FullExibirInformacoes();
             bool emprestado = false;
             foreach (var item in EmprestimosAtivos)
@@ -575,6 +581,7 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
             }
             if (!emprestado)
             {
+                Console.WriteLine("");
                 Console.WriteLine("Nenhum livro para devolver");
             }
             Console.WriteLine("");

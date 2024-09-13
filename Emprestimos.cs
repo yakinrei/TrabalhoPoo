@@ -65,9 +65,10 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
 
         public void Ft_ExibirInformacoesUsuario()
         {
+            Console.WriteLine("");
             Console.WriteLine($"Data de Empréstimo: {(Ft_GetDataEmprestimo().Day > 9 ? Ft_GetDataEmprestimo().Day : "0" + Ft_GetDataEmprestimo().Day)}/{(Ft_GetDataEmprestimo().Month > 9 ? Ft_GetDataEmprestimo().Month : "0" + Ft_GetDataEmprestimo().Month)}/{Ft_GetDataEmprestimo().Year,-23}");
             Ft_GetUsuario().Ft_ExibirInformacoes();
-            Console.WriteLine("");
+            
         }
 
         public void Ft_ExibirInformacoesLivro()
