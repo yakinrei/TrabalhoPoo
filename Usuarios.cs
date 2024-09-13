@@ -16,6 +16,7 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
         private string Nome { get; set; }
         private string Endereco { get; set; }
         private string Contato { get; set; }
+        private bool Status { get; set; }
         
         #endregion
 
@@ -28,6 +29,7 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
             Nome = nome;
             Endereco = endereco;
             Contato = contato;
+            Status = true;
             Id = Bibliotecas.NextIdUsuario;
             Bibliotecas.NextIdUsuario++;
         }
@@ -176,11 +178,16 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
         { 
             return this.Endereco; 
         }
-        
+
+        public bool Ft_GetStatus()
+        {
+            return this.Status;
+        }
+
         #endregion
 
         #region ExibirInfo
-        
+
         public void Ft_ExibirInformacoes()
         {
             Console.WriteLine($"Usuário: {Ft_GetNome(),-40} Nº Usuário: {Ft_GetId().ToString("D5"),10}");
