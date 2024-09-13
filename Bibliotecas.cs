@@ -12,6 +12,7 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
     internal class Bibliotecas
     {
         #region Atributos
+        
         public static uint NextIdUsuario = 1;
         public static uint NextIdBook = 1;
         public static string currentDirectory = Environment.CurrentDirectory;
@@ -20,10 +21,13 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
         private List<Usuarios> Utentes = new List<Usuarios>();
         private List<Emprestimos> EmprestimosAtivos = new List<Emprestimos>();
         public string name;
+        
         #endregion
 
         #region Builder
+        
         public Bibliotecas() : this(Ft_VerificaNome()) { }
+        
         public Bibliotecas(string nome)
         {
             name = nome;
@@ -75,6 +79,7 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
                 Console.Clear();
             }
         }
+        
         private static string Ft_VerificaNome()
         {
             string nome;
@@ -155,6 +160,7 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
 
             return;
         }
+        
         public void Ft_CarregaUsuarios()
         {
 
@@ -197,6 +203,7 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
 
             return;
         }
+        
         public void Ft_CarregaEmprestimos()
         {
             string filePath = projectDirectory + $"\\{this.name}\\emprestimos.txt";
@@ -237,6 +244,7 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
             }
             return;
         }
+        
         public void Ft_SalvaDados()
         {
             string filePath = projectDirectory + $"\\{this.name}\\acervo.txt";
@@ -287,9 +295,11 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
             Console.WriteLine("Obrigado pela preferência");
             return;
         }
+        
         #endregion
 
         #region Localização
+        
         public Livros Ft_GetLivro()
         {
             Console.WriteLine("Insira o Título ou ID do livro");
@@ -383,6 +393,7 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
         #endregion
 
         #region Registros
+        
         public void Ft_RegistrarLivro(string titulo, string autor, int ano, int copias)
         {
             Acervo.Add(new Livros(titulo, autor, ano, copias));
@@ -408,9 +419,11 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
             Utentes.Add(new Usuarios());
             Console.WriteLine($"Utente '{Utentes[Utentes.Count - 1].Ft_GetNome()}' registrado.\n");
         }
+       
         #endregion
         
         #region Emprestimos
+        
         public bool Ft_VerificarDisponibilidade(Livros livro)
         {
             if (livro == null)
@@ -507,6 +520,7 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
         #endregion
 
         #region Relatorios
+        
         public void Ft_GerarRelatoriodeEmprestimo()
         {
             Usuarios solicitante = Ft_GetUtente();
@@ -587,10 +601,11 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
             }
             Console.WriteLine("");
         }
-
+        
         #endregion
 
         #region Menu
+        
         public uint Ft_ExibirMenu()
         {
             uint comando;
@@ -621,6 +636,7 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
             }
             return comando;
         }
+        
         #endregion
 
     }

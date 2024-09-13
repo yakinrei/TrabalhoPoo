@@ -11,15 +11,18 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
     internal class Livros
     {
         #region Atributos
+        
         private uint Id { get; set; }
         private string Titulo { get; set; }
         private string Autor { get; set; }
         private int Ano { get; set; }
         private int Copias { get; set; }
         private int CopiasEmprestadas { get; set; }
+        
         #endregion
 
         #region Builder
+        
         public Livros() : this(Ft_VerificaTituloLivro(), Ft_VerificaNome(), Ft_VerificaAno(), Ft_VerificaNumeroCopias()) { }
         
         public Livros(string titulo, string autor, int ano, int copias)
@@ -184,9 +187,11 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
 
             return numeroCopias;
         }
+        
         #endregion
 
         #region Getters
+        
         public uint Ft_GetId() 
         { 
             return this.Id; 
@@ -211,13 +216,16 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
         {
             return this.Copias;
         }
+        
         public int Ft_GetCopiasEmprestadas()
         {
             return this.CopiasEmprestadas;
         }
+        
         #endregion
 
         #region Setters
+        
         public void Ft_EmprestaLivro()
         {
             this.CopiasEmprestadas++;
@@ -227,9 +235,11 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
         {
             this.CopiasEmprestadas--;
         }
+        
         #endregion
 
         #region ExibirInfo
+        
         public void Ft_ExibirInformacoes()
         {
             Console.WriteLine($"Livro: {Ft_GetTitulo(),-42} Código do Livro: {Ft_GetId().ToString("D5"),5}");
@@ -240,6 +250,7 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
             Console.WriteLine($"Livro: {Ft_GetTitulo(),-42} Código do Livro: {Ft_GetId().ToString("D5"),5}");
             Console.WriteLine($"Autor: {Ft_GetAutor(),-42} {Ft_GetCopias()-Ft_GetCopiasEmprestadas()} de {Ft_GetCopias()} disponiveis");
         }
+        
         #endregion
 
         

@@ -11,13 +11,16 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
     internal class Usuarios
     {
         #region Atributos
+        
         private uint Id { get; set; }
         private string Nome { get; set; }
         private string Endereco { get; set; }
         private string Contato { get; set; }
+        
         #endregion
 
         #region Builder
+        
         public Usuarios() : this(Ft_VerificaNome(), Ft_VerificaEndereco(), Ft_VerificaTelemovel()) { }
 
         public Usuarios(string nome, string endereco, string contato)
@@ -149,38 +152,47 @@ namespace Projeto_Grupo_Sistema_de_Biblioteca_POO
             } while (!verifica);
             return telemovel;
         }
+        
         #endregion
 
         #region Getters
+        
         public string Ft_GetNome() 
         { 
             return this.Nome; 
         }
+        
         public uint Ft_GetId() 
         { 
             return this.Id; 
         }
+        
         public string Ft_GetContato() 
         {
             return this.Contato; 
         }
+        
         public string Ft_GetMorada() 
         { 
             return this.Endereco; 
         }
+        
         #endregion
 
         #region ExibirInfo
+        
         public void Ft_ExibirInformacoes()
         {
             Console.WriteLine($"Usuário: {Ft_GetNome(),-40} Nº Usuário: {Ft_GetId().ToString("D5"),10}");
         }
+        
         public void Ft_FullExibirInformacoes()
         {
             Console.WriteLine($"Usuário: {Ft_GetNome(),-40} Nº Usuário: {Ft_GetId().ToString("D5"),10}");
             Console.WriteLine($"Morada: {Ft_GetMorada()}");
             Console.WriteLine($"Contato: {Ft_GetContato()}");
         }
+        
         #endregion
     }
 }
